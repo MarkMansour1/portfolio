@@ -1,0 +1,16 @@
+// Neue Haas Unica &  ITC Avant Garde fonts
+@import url("https://use.typekit.net/xwq7tyc.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.avant-garde {
+	font-family: "itc-avant-garde-gothic-pro", sans-serif;
+}

@@ -1,7 +1,16 @@
-import '../styles/globals.css'
+import { Provider } from "jotai";
+import { AnimatePresence } from "framer-motion";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+import "styles/index.scss";
+
+function MyApp({ Component, pageProps, router }) {
+	return (
+		<Provider>
+			<AnimatePresence exitBeforeEnter>
+				<Component {...pageProps} key={router.route} />
+			</AnimatePresence>
+		</Provider>
+	);
 }
 
-export default MyApp
+export default MyApp;
