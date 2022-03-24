@@ -12,7 +12,7 @@ export default function Index() {
 
 	return (
 		<Layout>
-			<div className="max-w-5xl mx-auto py-16">
+			<div className="max-w-5xl mx-auto py-8 lg:py-16 px-4 lg:px-0">
 				<motion.div
 					variants={stagger}
 					className="grid grid-cols-2 gap-x-8 gap-y-16">
@@ -24,7 +24,7 @@ export default function Index() {
 					</motion.div>
 					<motion.div variants={fadeUp} className="col-span-2">
 						<img
-							class="relative shadow-lg"
+							className="relative shadow-lg"
 							src={`/portfolio/${project?.name}.png`}
 							alt={project?.title}
 						/>

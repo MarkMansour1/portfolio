@@ -50,10 +50,10 @@ export default function Index() {
 						<motion.div
 							variants={fadeUp}
 							key={project.name}
-							className="py-16 text-center">
+							className="py-8 lg:py-16 text-center">
 							<Link href={`/portfolio/${project.name}`}>
 								<a
-									className="text-4xl hover:text-white hover:drop-shadow transition"
+									className="text-2xl lg:text-4xl hover:text-white hover:drop-shadow transition"
 									onMouseEnter={() => {
 										setVisible(true);
 										setSelected(index);
