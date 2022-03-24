@@ -4,19 +4,9 @@ import Layout from "components/Layout";
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { fadeIn, fadeUp, stagger } from "util/animations";
+import { fadeUp, stagger } from "util/animations";
 
-const projects = [
-	{ title: "The Cabin Studios", name: "cabinstudios" },
-	{ title: "CrepPlug", name: "crepplug" },
-	{ title: "Cemester", name: "cemester" },
-	{ title: "DM Fitness & Performance", name: "dmfnp" },
-	{ title: "Koto", name: "koto" },
-	{ title: "Firth Gardens", name: "firthgardens" },
-	{ title: "Denis Gardiner", name: "denisgardiner" },
-	{ title: "Kingdom Compassion", name: "kingdomcompassion" },
-	{ title: "Coco Cares", name: "cococares" },
-];
+import projects from "lib/projects";
 
 export default function Index() {
 	const [selected, setSelected] = useState(0);
@@ -60,8 +50,8 @@ export default function Index() {
 						<motion.div
 							variants={fadeUp}
 							key={project.name}
-							className="py-24 text-center">
-							<Link href={`/${project.name}`}>
+							className="py-16 text-center">
+							<Link href={`/portfolio/${project.name}`}>
 								<a
 									className="text-4xl hover:text-white hover:drop-shadow transition"
 									onMouseEnter={() => {
