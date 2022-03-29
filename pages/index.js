@@ -66,6 +66,18 @@ export default function Index() {
 					))}
 				</motion.div>
 			</div>
+			{/* Preload images */}
+			<div>
+				{projects.map((project) => (
+					<Image
+						src={`/thumbnails/${project.name}.png`}
+						alt={project.title}
+						key={project.name}
+						width="0"
+						height="0"
+					/>
+				))}
+			</div>
 		</Layout>
 	);
 }
