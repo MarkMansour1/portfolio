@@ -67,14 +67,14 @@ export default function Index() {
 				</motion.div>
 			</div>
 			{/* Preload images */}
-			<div>
+			<div className="opacity-0">
 				{projects.map((project) => (
 					<Image
 						src={`/thumbnails/${project.name}.png`}
 						alt={project.title}
 						key={project.name}
-						width="0"
-						height="0"
+						width="1"
+						height="1"
 					/>
 				))}
 			</div>
